@@ -9,15 +9,13 @@
 </head>
 <body>
     <header>
-        <h1 class="animated-title">
-            contacto
-            <img src="img/CURZA-logo.png" alt="Logo CURZA" class="curza-logo" />
-        </h1>
+        <h1>contacto</h1>
+        <img src="img/CURZA-logo.png" alt="Logo curza" class="logo">
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">volver a la pagina principal</a></li>
+            <li><a href="index.html">Inicio</a> </li>
             <li><a href="acercade.html">acerca de mi</a></li>
             <li><a href="juego.html">juego</a></li>
             <li><a href="preguntas.html">preguntas</a></li>
@@ -27,28 +25,16 @@
 
     <form>
     <label for="fname">Nombre:</label><br><input type="text" id="fname" name="fname" required maxlength="20"><br>
-    <label for="fapellido">Apellido:</label><br>
-
-    <input type="text" id="fapellido" name="fapellido" required maxlength="20"><br>
-    <label for="femail">Email (Requerido):</label><br>
-    <input type="email" id="femail" name="femail" required><br>
-
-    <label for="ftelefono">Telefono:</label><br>
-    <input type="tel" id="ftelefono" name="ftelefono" placeholder="ingrese su Telefono"><br>
-
-    <label for="fedad">Edad:</label><br>
-    <input type="number" id="fedad" name="fedad"><br> 
-
-    <label for="fdireccion">Direccion:</label><br>
-    <input type="text" id="fdireccion" name="fdireccion"><br>
-
-    <label for="codigoPostal">Codigo Postal:</label><br>
-    <input type="text" name="codigoPostal" id="codigoPostal" placeholder="ejemplo: A1234ABC" pattern="^[A-Z]\d{4}[A-Z]{3}$" required/>
-
-    <label for="listaprovincias">selecciones o escriba su provincia:</label>
-    <input type="text" list="listaprovincias" name="listaprovincias">
+    <label for="fapellido">Apellido:</label><br><input type="text" id="fapellido" name="fapellido" required maxlength="20"><br>
+    <label for="femail">Email (Requerido):</label><br><input type="text" id="femail" name="femail"><br>
+    <label for="ftelefono">Telefono:</label><br><input type="text" id="ftelefono" placeholder="ingrese su Telefono"><br>
+    <label for="fedad">Edad:</label><br><input type="text" id="fedad" name="fedad"><br>   
+    <label for="fdireccion">Direccion:</label><br><input type="text" id="fdireccion" name="fdireccion"><br>
+    <label for="codigoPostal">Codigo Postal:</label><br><input type="text" name="codigoPostal" id="codigoPostal" placeholder="ejemplo: A1234ABC" pattern="^[A-Z]\d{4}[A-Z]{3}$" required/>
+ </form>
+ <form>
+    <label for="listaprovincias">selecciones o escriba su provincia:</label><input type="text" list="listaprovincias" name="listaprovincias">
 <datalist id="listaprovincias">
-
     <option value="La Pampa">La Pampa</option>
     <option value="Rio Negro">Rio Negro</option>
     <option value="Neuquen">Neuquen</option>
@@ -56,50 +42,49 @@
     <option value="Santa Cruz">Santa Cruz</option>
     <option value="Tierra del Fuego">Tierra del Fuego</option>
 </datalist>
+</form>
 
 <fieldset>
     <legend>Metodo preferido de Contacto:</legend>
 <div> 
-    <input type="radio" id="correo electronico" name="contactMethod" value="correoElectronico" checked/>
+    <input type="checkbox" id="correo electronico" name="correo electronico" checked/>
     <label for="correo electronico">Correo Electronico</label>
 </div>
 
 <div> 
-    <input type="radio" id="correoPostal" name="contactMethod" value="correoPostal">
-    <label for="correoPostal">Correo Postal</label>
+    <input type="checkbox" id="correo postal" name="correo postal"/>
+    <label for="correo postal">Correo Postal</label>
 </div>
 
 <div> 
-    <input type="radio" id="telefono" name="contactMethod" value="telefono">
-    <label for="telefono">Teléfono</label>
+    <input type="checkbox" id="telefono" name="telefono"/>
+    <label for="telefono">Telefono</label>
 </div>
-
 </fieldset>
 
 <fieldset>
     <legend>Eleccion del tipo de suscripcion entre:</legend>
 <div> 
-    <input type="checkbox" id="noticias" name="subscription" value="noticias">
+    <input type="checkbox" id="noticias" name="noticias"/>
     <label for="noticias">Noticias</label>
 </div>
 
 <div> 
-    <input type="checkbox" id="alerta" name="subscription" value="alerta" checked>
+    <input type="checkbox" id="alerta" name="alerta" checked/>
     <label for="alerta">Alerta</label>
 </div>
 
 <div> 
-    <input type="checkbox" id="promociones" name="subscription" value="promociones">
+    <input type="checkbox" id="promociones" name="promociones"/>
     <label for="promociones">Promociones</label>
 </div>
 
 <div> 
-    <input type="checkbox" id="eventos" name="subscription" value="eventos">
+    <input type="checkbox" id="eventos" name="eventos"/>
     <label for="eventos">Eventos</label>
 </div>
 </fieldset>
-<button class="boton" type="submit">Cargar</button>
-</form>
+<button class="boton">Cargar</button>
 
 <table class="tabla">
     <thead>
@@ -151,11 +136,6 @@
     </tr>
 </tbody>
 </table>
-
-<a href="#" class="back-to-top" id="backToTop">
-    &#8679;
-</a>
-
 </body>
 
 </html>
