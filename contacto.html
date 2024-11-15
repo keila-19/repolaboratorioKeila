@@ -9,8 +9,10 @@
 </head>
 <body>
     <header>
-        <h1>contacto</h1>
+        <h1 class="animated-title">
+            contacto
         <img src="img/CURZA-logo.png" alt="Logo curza" class="logo">
+        </h1>
     </header>
 
     <nav>
@@ -23,14 +25,21 @@
         </ul>
     </nav>
 
-    <form>
-    <label for="fname">Nombre:</label><br><input type="text" id="fname" name="fname" required maxlength="20"><br>
-    <label for="fapellido">Apellido:</label><br><input type="text" id="fapellido" name="fapellido" required maxlength="20"><br>
-    <label for="femail">Email (Requerido):</label><br><input type="text" id="femail" name="femail"><br>
-    <label for="ftelefono">Telefono:</label><br><input type="text" id="ftelefono" placeholder="ingrese su Telefono"><br>
-    <label for="fedad">Edad:</label><br><input type="text" id="fedad" name="fedad"><br>   
-    <label for="fdireccion">Direccion:</label><br><input type="text" id="fdireccion" name="fdireccion"><br>
-    <label for="codigoPostal">Codigo Postal:</label><br><input type="text" name="codigoPostal" id="codigoPostal" placeholder="ejemplo: A1234ABC" pattern="^[A-Z]\d{4}[A-Z]{3}$" required/>
+    <form id="contactForm">
+    <label for="fname">Nombre:</label><br>
+    <input type="text" id="fname" name="fname" required maxlength="20"><br>
+    <label for="fapellido">Apellido:</label><br>
+    <input type="text" id="fapellido" name="fapellido" required maxlength="20"><br>
+    <label for="femail">Email (Requerido):</label><br>
+    <input type="text" id="femail" name="femail"><br>
+    <label for="ftelefono">Telefono:</label><br>
+    <input type="text" id="ftelefono" placeholder="ingrese su Telefono"><br>
+    <label for="fedad">Edad:</label><br>
+    <input type="text" id="fedad" name="fedad"><br>   
+    <label for="fdireccion">Direccion:</label><br>
+    <input type="text" id="fdireccion" name="fdireccion"><br>
+    <label for="codigoPostal">Codigo Postal:</label><br>
+    <input type="text" name="codigoPostal" id="codigoPostal" placeholder="ejemplo: A1234ABC" pattern="^[A-Z]\d{4}[A-Z]{3}$" required/>
  </form>
  <form>
     <label for="listaprovincias">selecciones o escriba su provincia:</label><input type="text" list="listaprovincias" name="listaprovincias">
