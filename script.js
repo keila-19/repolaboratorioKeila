@@ -57,4 +57,19 @@ formulario.addEventListener('input', actualizarTabla);
 
 // Llamar a la función para asegurar que los datos de la tabla estén actualizados al cargar la página
 actualizarTabla();
+
+// Función para mostrar el CV completo cuando se haga clic en el botón
+function mostrarCV() 
+{
+    const cvRevelado = document.getElementById("cv-revelado");
+    const leerMasBtn = document.getElementById("leerMasBtn");
+
+    if (cvRevelado.style.display === "none") {
+        cvRevelado.style.display = "inline";
+        leerMasBtn.textContent = "Leer menos";
+    } else {
+        cvRevelado.style.display = "none";
+        leerMasBtn.textContent = "Leer más";
+    }
+}
 </script>
