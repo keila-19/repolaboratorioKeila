@@ -1,28 +1,32 @@
-/* Variables (opcional) */
+/* --- Variables de colores (Paleta de colores mejorada) --- */
 :root {
-    --primary-bg-color: #333;
-    --secondary-bg-color: #f0e6d6;
-    --accent-color: #4b0082;
-    --highlight-color: #98fb98;
-    --secondary-color: #8a2be2;
-    --text-color: black;
+    --primary-bg-color: #2c3e50;      /* Gris oscuro */
+    --secondary-bg-color: #ecf0f1;    /* Blanco grisáceo */
+    --accent-color: #3498db;           /* Azul vibrante */
+    --highlight-color: #2ecc71;        /* Verde fresco */
+    --secondary-color: #9b59b6;        /* Violeta suave */
+    --text-color: #34495e;             /* Gris oscuro para texto */
+    --link-hover-color: #f39c12;       /* Naranja cálido para hover */
+    --button-bg-color: #2980b9;        /* Azul oscuro para botones */
+    --button-hover-bg-color: #1abc9c;  /* Verde brillante para hover */
 }
 
-/* Reset de márgenes y padding */
+/* --- Reset de márgenes y padding --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* --- Estilos Generales --- */
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', sans-serif;
     background-color: var(--secondary-bg-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Header */
+/* --- Header --- */
 header {
     background-color: var(--primary-bg-color);
     color: white;
@@ -30,13 +34,13 @@ header {
     padding: 20px;
 }
 
-/* Logo en header */
+/* Logo en Header */
 header .logo {
     width: 80px;
     margin-top: 10px;
 }
 
-/* Navegación */
+/* --- Navegación --- */
 nav {
     position: fixed;
     top: 0;
@@ -50,23 +54,24 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-    float: left;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    background-color: #f4f4f4;
-    color: var(--accent-color);
-    padding: 10px;
-    border: 4px solid var(--accent-color);
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 18px;
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-bg-color);
+    padding: 12px 20px;
+    border: 2px solid var(--primary-bg-color);
     text-decoration: none;
-    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a:hover {
@@ -74,51 +79,56 @@ a:hover {
     color: white;
 }
 
-/* Títulos */
+/* --- Títulos --- */
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4em;
-    margin-top: 70px;
-    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3.5rem;
     color: var(--highlight-color);
+    margin-top: 80px;
     text-align: center;
 }
 
 h2 {
-    font-family: cursive;
-    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
     color: var(--secondary-color);
     margin: 10px;
     text-align: center;
 }
 
-/* Main content */
+/* --- Main Content --- */
 main {
     background-color: #66cccc;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 main img {
-    width: 300px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    box-shadow: 4px 1px white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Sticky header */
+main img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Sticky Header --- */
 .sticky-header {
     position: sticky;
     top: 0;
+    background-color: var(--primary-bg-color);
     padding: 10px;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
     background-color: var(--highlight-color);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -127,14 +137,14 @@ footer p {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Botón "Back to top" */
+/* --- Botón "Back to Top" --- */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-bg-color);
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-bg-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -143,15 +153,16 @@ footer p {
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    opacity: 0.8;
+    transition: opacity 0.3s, background-color 0.3s;
 }
 
 .back-to-top:hover {
     opacity: 1;
+    background-color: var(--button-hover-bg-color);
 }
 
-/* Animaciones */
+/* --- Animaciones --- */
 .title {
     font-size: 3rem;
     text-align: center;
@@ -190,15 +201,15 @@ footer p {
     animation-play-state: paused;
 }
 
-/* Medios y responsividad */
+/* --- Medios y Responsividad --- */
 @media (max-width: 768px) {
     nav ul {
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav li {
-        display: inline-block;
-        margin-right: 15px;
+        margin: 10px 0;
     }
 
     h1 {
@@ -206,15 +217,22 @@ footer p {
     }
 
     main img {
-        width: 100%;
-        max-width: 300px;
+        max-width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
     }
 }
