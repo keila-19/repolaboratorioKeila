@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>juego</title>
+    <title>Juego de Adivinanza de Números</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Preguntas</h1>
-    <img src="img/CURZA-logo.png" alt="Logo curza" class="logo">
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acercade.html">acerca de mi</a></li>
-            <li><a href="juego.html">juego</a></li>
-            <li><a href="preguntas.html">preguntas</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        <h2>Enunciado</h2>
-
-        <ol>
-            <li>"respuesta 1" = correcto</li>
-            <li>"respuesta 2" = casi</li>
-            <li>"respuesta 3" = incorrecto</li>
-            <li>"respuesta 4" = perfecto</li>
-        </ol>
-    </section>
+    <div class="game-container">
+        <h1>Juego de Adivinanza de Números</h1>
+        <p>Estoy pensando en un número entre 1 y 100. ¡Adivina cuál es!</p>
+        
+        <label for="guess">Tu Adivinanza:</label>
+        <input type="number" id="guess" placeholder="Escribe tu número">
+        <button id="submit-guess">Adivinar</button>
+        
+        <p id="message"></p>
+        
+        <button id="reset" style="display:none;">Jugar otra vez</button>
+    </div>
     <footer>
         <p>&copy; 2024 Universidad Nacional del Comahue, nodo Sierra Colorada. Todos los derechos reservados.©</p>
     </footer>
-
     <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+    <script src="game.js"></script>
 </body>
 </html>
 
