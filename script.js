@@ -1,4 +1,3 @@
-<script> 
 // Obtener los elementos del formulario y la tabla
 const formulario = document.getElementById('contactForm');
 const tabla = {
@@ -72,4 +71,3 @@ function mostrarCV()
         leerMasBtn.textContent = "Leer más";
     }
 }
-</script>
