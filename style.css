@@ -1,29 +1,181 @@
-.back-to-top 
-{
+/* Variables (opcional) */
+:root {
+    --primary-bg-color: #333;
+    --secondary-bg-color: #f0e6d6;
+    --accent-color: #4b0082;
+    --highlight-color: #98fb98;
+    --secondary-color: #8a2be2;
+    --text-color: black;
+}
+
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-bg-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo en header */
+header .logo {
+    width: 80px;
+    margin-top: 10px;
+}
+
+/* Navegación */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    float: left;
+    margin-right: 10px;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: #f4f4f4;
+    color: var(--accent-color);
+    padding: 10px;
+    border: 4px solid var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Títulos */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4em;
+    margin-top: 70px;
+    padding: 0;
+    color: var(--highlight-color);
+    text-align: center;
+}
+
+h2 {
+    font-family: cursive;
+    font-size: 25px;
+    color: var(--secondary-color);
+    margin: 10px;
+    text-align: center;
+}
+
+/* Main content */
+main {
+    background-color: #66cccc;
+    text-align: center;
+    padding: 20px;
+}
+
+main img {
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 4px 1px white;
+}
+
+/* Sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--highlight-color);
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Botón "Back to top" */
+.back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px; 
-    height: 50px; 
-    background-color: #333;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-bg-color);
     color: white;
-    border-radius: 50%; 
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.7; 
-    transition: opacity 0.3s ease; 
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
-.title 
-{
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+/* Animaciones */
+.title {
     font-size: 3rem;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
-  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateVertical {
+    from {
+        transform: translateY(-50%) rotateY(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotateY(360deg);
+    }
+}
+
 .logo {
     width: 100px;
     height: 100px;
@@ -34,155 +186,35 @@
     animation: rotateVertical 3s ease-in-out forwards;
 }
 
-@keyframes fadeIn {
-    from {
-    opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes rotateVertical {
-    from {
-transform: translateY(-50%) rotateY(0deg); 
-    }
-    to {
-        transform: translateY(-50%) rotateY(360deg); 
-    }
-}
-
-.logo-stopped 
-{
+.logo-stopped {
     animation-play-state: paused;
 }
 
+/* Medios y responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: left;
+    }
 
-*
-{
-    margin: 0; 
-    padding: 0;
+    nav li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main img {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
-body
-{
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f0e6d6;
-}
-
-header
-{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-header .logo
-{
-    width: 80px;
-    margin-top: 10px;
-}
-
-nav
-{
-    position: fixed;
-    top: 0;  
-    left: 0; 
-    width: 100%;
-    background-color: #333; 
-    z-index: 1000;
-}
-
-h1
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-    padding-top: 70px;
-    color: #98fb98;
-}
-
-h2
-{
-    font-family: cursive;
-    font-size: 25px;
-    color: #8a2be2;
-}
-
-h2
-{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
-    color: blueviolet;
-    margin: 10px;
-}
-
-nav ul
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav li
-{
-    float: left;
-    margin-right: 10px;
-}
-
-a
-{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: inline-flex;
-    font-size: 20px;
-    background-color: #f4f4f4;
-    color: #4b0082;
-    padding: 10px;
-    border: 4px solid #4b0082;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-main
-{
-    background-color: #66cccc;
-    text-align: center;
-    padding: 10px;
-}
-
-main img
-{
-    width: 300px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    box-shadow: 4px 1px white;
-}
-
-.sticky-header 
-{
-    position: sticky;
-    top: 0;
-    /*background-color: #f4f4f4;*/
-    padding: 10px;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-footer
-{
-    background-color: #98fb98;
-    padding: 15px;
-    text-align: center;
-}
-
-footer p
-{
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
